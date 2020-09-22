@@ -1,0 +1,9 @@
+.dialog-pane .button{
+    -fx-background-color: #f11b3d;
+}
+.dialog-pane .header-panel{
+    -fx-background-color: #a8f5f4;
+}
+.root{
+    -fx-background-color: #67cccb;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proiect.licentam.fxController.HouseControllerFX">
+   <children>
+      <Button fx:id="logoutB" layoutX="1112.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="65.0" text="Log out" />
+      <TableView fx:id="homeTable" accessibleText="Show" layoutX="46.0" layoutY="32.0" prefHeight="438.0" prefWidth="851.0">
+        <columns>
+          <TableColumn fx:id="typeColumn" prefWidth="121.0" text="Type" />
+            <TableColumn fx:id="priceColumn" minWidth="1.0" prefWidth="88.0" text="Price" />
+            <TableColumn fx:id="surfaceColumn" prefWidth="63.0" text="Surface" />
+            <TableColumn fx:id="yearBuiltColumn" prefWidth="86.0" text="Year built" />
+            <TableColumn fx:id="zoneColumn" prefWidth="154.0" text="Zone" />
+            <TableColumn fx:id="addressColumn" prefWidth="180.0" text="Street" />
+            <TableColumn fx:id="numberColumn" prefWidth="52.0" text="Number" />
+            <TableColumn fx:id="statusColumn" prefWidth="106.0" text="Sold | Not" />
+        </columns>
+      </TableView>
+      <Button fx:id="showB" layoutX="46.0" layoutY="525.0" mnemonicParsing="false" onAction="#populateTable" prefHeight="25.0" prefWidth="105.0" text="Show All" textFill="#0a0a0a" />
+      <Button fx:id="saveB" layoutX="962.0" layoutY="613.0" mnemonicParsing="false" onAction="#saveHome" prefHeight="25.0" prefWidth="105.0" text="Save" />
+      <TextField fx:id="textFieldPrice" layoutX="174.0" layoutY="613.0" prefHeight="25.0" prefWidth="85.0" promptText="Price" />
+      <TextField fx:id="textFieldSurface" layoutX="287.0" layoutY="613.0" prefHeight="25.0" prefWidth="54.0" promptText="m*2" />
+      <TextField fx:id="textFieldYearBuilt" layoutX="368.0" layoutY="613.0" prefHeight="25.0" prefWidth="85.0" promptText=" Year built" />
+      <TextField fx:id="textFieldAddress" layoutX="625.0" layoutY="613.0" prefHeight="25.0" prefWidth="122.0" promptText="Street" />
+      <ComboBox fx:id="typeCB" layoutX="46.0" layoutY="613.0" prefHeight="25.0" prefWidth="105.0" promptText="Type" />
+      <ComboBox fx:id="zoneCB" layoutX="479.0" layoutY="613.0" prefHeight="25.0" prefWidth="122.0" promptText="Zone" />
+      <ComboBox fx:id="soldCB" layoutX="810.0" layoutY="613.0" prefHeight="25.0" prefWidth="122.0" promptText="Sold | Not Sold" />
+      <Button fx:id="deleteB" layoutX="479.0" layoutY="705.0" mnemonicParsing="false" onAction="#deleteHome" prefHeight="25.0" prefWidth="105.0" text="Delete" />
+      <Button fx:id="updateHome" layoutX="322.0" layoutY="705.0" mnemonicParsing="false" onAction="#updateHome" prefHeight="25.0" prefWidth="105.0" text="Update" />
+      <TextField fx:id="textFieldNewPrice" layoutX="46.0" layoutY="705.0" prefHeight="25.0" prefWidth="105.0" promptText="NewPrice" />
+      <ComboBox fx:id="soldUpdateCB" layoutX="174.0" layoutY="705.0" prefHeight="25.0" prefWidth="122.0" promptText="Sold | Not Sold" />
+      <Button fx:id="creditB" layoutX="628.0" layoutY="525.0" mnemonicParsing="false" onAction="#calculateCredit" prefHeight="25.0" prefWidth="153.0" text="Calculate Credit" />
+      <Button fx:id="futurePriceB" layoutX="809.0" layoutY="525.0" mnemonicParsing="false" onAction="#calculateFuturePrice" prefHeight="25.0" prefWidth="153.0" text="Future Price" />
+      <Button fx:id="returnOfInvestB" layoutX="992.0" layoutY="525.0" mnemonicParsing="false" onAction="#calculateReturnOfInvestment" prefHeight="25.0" prefWidth="153.0" text="Return of Investment" />
+      <TextField fx:id="m2PriceFromTF" layoutX="918.0" layoutY="165.0" prefHeight="25.0" prefWidth="105.0" promptText="Price/m^2  From" />
+      <TextField fx:id="m2PriceToTF" layoutX="1053.0" layoutY="165.0" prefHeight="25.0" prefWidth="105.0" promptText="Price/m^2  To" />
+      <TextField fx:id="yearFromTF" layoutX="918.0" layoutY="226.0" prefHeight="25.0" prefWidth="105.0" promptText="Year built   From" />
+      <TextField fx:id="yearToTF" layoutX="1053.0" layoutY="226.0" prefHeight="25.0" prefWidth="105.0" promptText="Year built   To" />
+      <ComboBox fx:id="typeSelectCB" layoutX="918.0" layoutY="110.0" prefHeight="25.0" prefWidth="105.0" promptText="Type" />
+      <ComboBox fx:id="zoneSelectCB" layoutX="1053.0" layoutY="110.0" prefHeight="25.0" prefWidth="105.0" promptText="Zone" />
+      <Button fx:id="searchB" layoutX="918.0" layoutY="278.0" mnemonicParsing="false" onAction="#searchSpecificHomes" prefHeight="25.0" prefWidth="105.0" text="Search" />
+      <Button fx:id="myListB" layoutX="174.0" layoutY="525.0" mnemonicParsing="false" onAction="#showMyHomes" prefHeight="25.0" prefWidth="105.0" text="Show MyList" />
+      <Button fx:id="undervaluedB" layoutX="435.0" layoutY="525.0" mnemonicParsing="false" onAction="#showUndervaluedHomes" prefHeight="25.0" prefWidth="105.0" text="Undervalued" />
+      <Button fx:id="bestZone" layoutX="305.0" layoutY="525.0" mnemonicParsing="false" onAction="#getBestZones" prefHeight="25.0" prefWidth="105.0" text="Best Zone" />
+      <Button fx:id="exportB" layoutX="918.0" layoutY="337.0" mnemonicParsing="false" onAction="#exportHomeToPdf" prefHeight="25.0" prefWidth="105.0" text="Export PDF" />
+      <TextField fx:id="numberTextF" layoutX="747.0" layoutY="613.0" prefHeight="25.0" prefWidth="33.0" promptText="Nr" />
+   </children>
+</AnchorPane>

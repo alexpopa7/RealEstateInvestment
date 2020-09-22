@@ -1,0 +1,6 @@
+com\proiect\licentam\fxController\UserControllerFX.class
+com\proiect\licentam\services\UserService.class
+com\proiect\licentam\repository\UserRepository.class
+com\proiect\licentam\model\User.class
+com\proiect\licentam\LicentamApplication.class
+com\proiect\licentam\JavaFxApplication.class
